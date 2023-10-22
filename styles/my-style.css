@@ -12,8 +12,13 @@ body {
     fill: white;
 }
 
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
 .nav-link:hover {
     color: aquamarine;
+    transition: color 0.3s;
 }
 
 .navbar-toggler {
@@ -35,23 +40,34 @@ body {
     fill: aquamarine;
 }
 
-.carousel .item {
-    height: 100vw;
-}
-
-footer {
+.carousel-item p {
     background-color: var(--background-main-color);
+    border-radius: 10px; /* Zaoblené okraje */
+    transition: background-color 0.3s;
+}
+
+.carousel-item img {
+    max-height: 40rem;
+}
+
+h2 {
+    color: black;
+}
+
+.btn-custom {
+    background-color: #333;
     color: white;
-    height: 10rem;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btn-custom:hover {
+    background-color: aquamarine;
+    color: #333;
 }
 
-.container img {
-    width: 3rem;
-    height: 3rem;
+footer .container {
+    margin: 3rem;
 }
