@@ -4,25 +4,39 @@
 
 body {
     background-color: var(--background-main-color);
-    color: lightgray;
-}
-
-.navbar  {
-    background-color: aquamarine;
+    color: white;
 }
 
 .navbar-brand, .navbar-text, .nav-link {
-    color: black;
+    color: white;
+    fill: white;
 }
+
+.nav-link:hover {
+    color: aquamarine;
+}
+
+/* ciara na spodku */
+.nav-link {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid aquamarine;
+}
+
+
 
 .carousel .item {
     height: 100vw;
 }
 
 footer {
-    background-color: aquamarine;
-    color: black;
-    height: 10vw;
+    background-color: var(--background-main-color);
+    color: white;
+    height: 10rem;
 }
 
 .container {
