@@ -1,0 +1,16 @@
+:root {
+    --background-main-color: #333333;
+}
+
+body {
+    background-color: var(--background-main-color);
+    color: lightgray;
+}
+
+.navbar  {
+    background-color: aquamarine;
+}
+
+.navbar-brand, .navbar-text, .nav-link {
+    color: black;
+}
