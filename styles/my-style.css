@@ -16,6 +16,10 @@ body {
     color: aquamarine;
 }
 
+.navbar-toggler {
+    color: white;
+}
+
 /* ciara na spodku */
 .nav-link {
     text-decoration: none;
@@ -27,7 +31,9 @@ body {
     border-bottom: 2px solid aquamarine;
 }
 
-
+.nav-item a:hover svg path {
+    fill: aquamarine;
+}
 
 .carousel .item {
     height: 100vw;
