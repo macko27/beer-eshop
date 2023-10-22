@@ -14,3 +14,24 @@ body {
 .navbar-brand, .navbar-text, .nav-link {
     color: black;
 }
+
+.carousel .item {
+    height: 100vw;
+}
+
+footer {
+    background-color: aquamarine;
+    color: black;
+    height: 10vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    width: 3rem;
+    height: 3rem;
+}
