@@ -1,15 +1,21 @@
 :root {
-    --background-main-color: #333333;
+    --background-main-color: #3E2500;
+    --text-main-color: white;
+    --text-main-hoover: #DD9933;
 }
 
-body {
+body, .navbar {
     background-color: var(--background-main-color);
-    color: white;
+    color: var(--text-main-color);
+}
+
+.logo {
+    margin-right: 3rem;
 }
 
 .navbar-brand, .navbar-text, .nav-link {
-    color: white;
-    fill: white;
+    color: var(--text-main-color);
+    fill: var(--text-main-color);
 }
 
 .navbar-nav .nav-item {
@@ -17,12 +23,12 @@ body {
 }
 
 .nav-link:hover {
-    color: aquamarine;
+    color: var(--text-main-hoover);
     transition: color 0.3s;
 }
 
 .navbar-toggler {
-    color: white;
+    color: var(--text-main-color);
 }
 
 /* ciara na spodku */
@@ -33,11 +39,11 @@ body {
 }
 
 .nav-link:hover {
-    border-bottom: 2px solid aquamarine;
+    border-bottom: 2px solid var(--text-main-hoover);;
 }
 
 .nav-item a:hover svg path {
-    fill: aquamarine;
+    fill: var(--text-main-hoover);;
 }
 
 .carousel-item p {
@@ -56,7 +62,7 @@ h2 {
 
 .btn-custom {
     background-color: #333;
-    color: white;
+    color: var(--text-main-color);
     border: none;
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -64,8 +70,8 @@ h2 {
 }
 
 .btn-custom:hover {
-    background-color: aquamarine;
-    color: #333;
+    background-color: var(--text-main-hoover);
+    color: var(--text-main-color);
 }
 
 footer .container {
