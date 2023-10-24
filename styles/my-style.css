@@ -27,7 +27,8 @@ body {
 }
 
 .navbar-nav .nav-item {
-    margin-right: 10px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .nav-link:hover {
@@ -65,7 +66,18 @@ h2 {
 
 .btn-custom:hover {
     background-color: var(--text-main-hoover);
+    color: var(--text-main-color);
+}
+
+.btn-custom-navbar {
     color: var(--text-second-color);
+    border: 1px solid var(--text-second-color);
+    width: 7rem;
+}
+
+.btn-custom-navbar:hover {
+    color: var(--text-main-color);
+    background-color: var(--text-main-hoover);
 }
 
 footer .container {

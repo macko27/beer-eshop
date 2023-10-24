@@ -1,0 +1,14 @@
+@media (min-width: 700px) {
+    .search-bar {
+        margin: auto;
+        min-width: 15rem;
+        max-width: 40rem;
+    }
+}
+
+/*
+main .container {
+    background-color: #007bff;
+}
+
+ */
