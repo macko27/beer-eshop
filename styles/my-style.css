@@ -1,5 +1,6 @@
 :root {
-    --background-main-color: #3E2500;
+    --background-main-color: white;
+    --background-second-color: #3E2500;
     --text-main-color: white;
     --text-main-hoover: #DD9933;
 }
@@ -47,7 +48,7 @@ body, .navbar {
 }
 
 .carousel-item p {
-    background-color: var(--background-main-color);
+    background-color: var(--background-second-color);
     border-radius: 10px; /* Zaoblené okraje */
     transition: background-color 0.3s;
 }
