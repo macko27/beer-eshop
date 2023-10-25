@@ -6,9 +6,22 @@
     }
 }
 
-/*
-main .container {
-    background-color: #007bff;
+
+
+
+input[type="checkbox"] {
+    display: none;
 }
 
- */
+label {
+    cursor: pointer;
+}
+
+.card-body p.card-text {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label .card-body p.card-text {
+    display: block;
+}
+
