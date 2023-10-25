@@ -80,49 +80,59 @@
             </form>
         </div>
 
+        <section>
+            <div class="sidebar">
+                <h5 class="sidebar-title">Pivovar</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ZRP">
+                    <label class="form-check-label" for="ZRP">
+                        Zvolenský remeselný pivovar
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="vrsky">
+                    <label class="form-check-label" for="vrsky">
+                        Vŕšky
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="baran">
+                    <label class="form-check-label" for="baran">
+                        Barana
+                    </label>
+                </div>
+            </div>
+            <div class="sidebar">
+                <h5 class="sidebar-title">Druh</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="tmave">
+                    <label class="form-check-label" for="tmave">
+                        Tmavé
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="polotmave">
+                    <label class="form-check-label" for="polotmave">
+                        Polotmavé
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="svetle">
+                    <label class="form-check-label" for="svetle">
+                        Svetlé
+                    </label>
+                </div>
+            </div>
+        </section>
 
-        <div class="album py-5 bg-body-tertiary">
+
+        <div class="album py-5">
             <div class="container">
-
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5">
-
-
-
-                    <div class="aside">
-                        <section id="sidebar">
-                            <div class="sidebar-items">
-                                <h5 class="sidebar-title">Značky</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Zvolenský remeselný pivovar
-                                        </label>
-                                        <span class="badge badge-primary badge-pill">328</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Vŕšky
-                                        </label>
-                                        <span class="badge badge-primary badge-pill">112</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Baran
-                                        </label>
-                                        <span class="badge badge-primary badge-pill">32</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-
                     <div class="col">
-                        <input type="checkbox" id="togglePivo1">
-                        <label for="togglePivo1">
-                            <div class="card shadow-sm">
+                        <input type="checkbox" id="toggle1">
+                        <label for="toggle1">
+                            <div class="card mx-auto">
                                 <img src="images/sell/pivo1.png" alt="pivo">
                                 <div class="card-body">
                                     <h2>BACK IN TOWN</h2>
@@ -138,79 +148,94 @@
                         </label>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="images/sell/pivo1.png" alt="pivo">
-                            <div class="card-body">
-                                <h2>BACK IN TOWN</h2>
-                                <h3>IPA</h3>
-                                <h4>14°</h4>
-                                <h5>Cena: 5 EUR</h5>
-                                <p class="card-text"></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                        <input type="checkbox" id="toggle2">
+                        <label for="toggle2">
+                            <div class="card mx-auto">
+                                <img src="images/sell/pivo2.png" alt="pivo">
+                                <div class="card-body">
+                                    <h2>ŽELEZNÁ LADY</h2>
+                                    <h3>IPA</h3>
+                                    <h4>15°</h4>
+                                    <h5>Cena: 5 EUR</h5>
+                                    <p class="card-text">Popis piva</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="images/sell/pivo1.png" alt="pivo">
-                            <div class="card-body">
-                                <h2>BACK IN TOWN</h2>
-                                <h3>IPA</h3>
-                                <h4>14°</h4>
-                                <h5>Cena: 5 EUR</h5>
-                                <p class="card-text"></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                        <input type="checkbox" id="toggle3">
+                        <label for="toggle3">
+                            <div class="card mx-auto">
+                                <img src="images/sell/pivo3.png" alt="pivo">
+                                <div class="card-body">
+                                    <h2>TANCUJÚCA KOMéTA</h2>
+                                    <h3>IPA</h3>
+                                    <h4>11°</h4>
+                                    <h5>Cena: 5 EUR</h5>
+                                    <p class="card-text">Popis piva</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="images/sell/pivo1.png" alt="pivo">
-                            <div class="card-body">
-                                <h2>BACK IN TOWN</h2>
-                                <h3>IPA</h3>
-                                <h4>14°</h4>
-                                <h5>Cena: 5 EUR</h5>
-                                <p class="card-text"></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                        <input type="checkbox" id="toggle4">
+                        <label for="toggle4">
+                            <div class="card mx-auto">
+                                <img src="images/sell/pivo4.png" alt="pivo">
+                                <div class="card-body">
+                                    <h2>LIETAJÚCA KOALA</h2>
+                                    <h3>IPA</h3>
+                                    <h4>14°</h4>
+                                    <h5>Cena: 5 EUR</h5>
+                                    <p class="card-text">Popis piva</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="images/sell/pivo1.png" alt="pivo">
-                            <div class="card-body">
-                                <h2>BACK IN TOWN</h2>
-                                <h3>IPA</h3>
-                                <h4>14°</h4>
-                                <h5>Cena: 5 EUR</h5>
-                                <p class="card-text"></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                        <input type="checkbox" id="toggle5">
+                        <label for="toggle5">
+                            <div class="card mx-auto">
+                                <img src="images/sell/pivo5.png" alt="pivo">
+                                <div class="card-body">
+                                    <h2>ZÁLETNÁ SUSEDA</h2>
+                                    <h3>IPA</h3>
+                                    <h4>13°</h4>
+                                    <h5>Cena: 5 EUR</h5>
+                                    <p class="card-text">Popis piva</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="images/sell/pivo1.png" alt="pivo">
-                            <div class="card-body">
-                                <h2>BACK IN TOWN</h2>
-                                <h3>IPA</h3>
-                                <h4>14°</h4>
-                                <h5>Cena: 5 EUR</h5>
-                                <p class="card-text"></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                        <input type="checkbox" id="toggle6">
+                        <label for="toggle6">
+                            <div class="card mx-auto">
+                                <img src="images/sell/pivo6.png" alt="pivo">
+                                <div class="card-body">
+                                    <h2>ŽELEZNÁ LADY</h2>
+                                    <h3>WHEAT</h3>
+                                    <h4>11°</h4>
+                                    <h5>Cena: 5 EUR</h5>
+                                    <p class="card-text">Popis piva</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </label>
                     </div>
                 </div>
             </div>

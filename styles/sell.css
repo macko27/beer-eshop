@@ -6,21 +6,35 @@
     }
 }
 
-input[type="checkbox"] {
+.container input[type="checkbox"] {
     display: none;
 }
 
-label {
+.container label {
     cursor: pointer;
     display: block;
     width: 100%; /* Přidáno pro roztáhnutí na šířku */
 }
 
-.card-body p.card-text {
+.container .card-body p.card-text {
     display: none;
 }
 
-input[type="checkbox"]:checked + label .card-body p.card-text {
+.container input[type="checkbox"]:checked + label .card-body p.card-text {
     display: block;
 }
 
+.container .card {
+    max-width: 20rem;
+}
+
+section {
+    background-color: #3E2500;
+    color: white;
+    margin: 3rem auto; /* Ponecháme jen margin, odstraníme min-width a max-width */
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
