@@ -6,6 +6,10 @@
     }
 }
 
+main img {
+    height: 15rem;
+}
+
 .container input[type="checkbox"] {
     display: none;
 }
@@ -13,7 +17,7 @@
 .container label {
     cursor: pointer;
     display: block;
-    width: 100%; /* Přidáno pro roztáhnutí na šířku */
+    width: 100%;
 }
 
 .container .card-body p.card-text {
@@ -31,7 +35,7 @@
 section {
     background-color: #3E2500;
     color: white;
-    margin: 3rem auto; /* Ponecháme jen margin, odstraníme min-width a max-width */
+    margin: 3rem;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
