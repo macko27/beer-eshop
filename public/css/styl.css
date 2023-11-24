@@ -86,13 +86,13 @@ footer .container {
     padding: 3rem;
 }
 
+.web-content {
+    min-height: 100vh;
+}
 
 /*
 index.html
  */
-body {
-
-}
 
 .carousel-item p {
     background-color: var(--background-second-color);
@@ -149,6 +149,13 @@ main img {
     max-width: 20rem;
 }
 
+.login-link {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
 section {
     background-color: #3E2500;
     color: white;
@@ -177,14 +184,6 @@ nav a img {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.container-login {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    width: auto;
 }
 
 .logo-container {
@@ -247,3 +246,10 @@ beer.html
     text-align: left;
 }
 
+.container-form-add {
+    margin: 5rem 5rem 5rem 5rem;
+}
+
+.form-control {
+    border-color: black;
+}

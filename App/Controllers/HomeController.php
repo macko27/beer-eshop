@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\Beer;
 
 /**
  * Class HomeController
@@ -37,11 +38,19 @@ class HomeController extends AControllerBase
      */
     public function sell(): Response
     {
-        return $this->html();
+        return $this->html(
+            [
+                'beers' => Beer::getAll()
+            ]
+        );
     }
 
     public function beer(): Response
     {
-        return $this->html();
+        $id = $this->request()->getValue("id");
+        $beer = Beer::getOne($id);
+        return $this->html([
+            "beer" => $beer
+        ]);
     }
 }

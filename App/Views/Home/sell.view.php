@@ -1,7 +1,8 @@
 <?php
 
 /** @var Array $data */
-
+/** @var \App\Models\Beer $beer */
+/** @var \App\Core\IAuthenticator $auth */
 /** @var \App\Core\LinkGenerator $link */
 ?>
 
@@ -74,102 +75,27 @@
     <div class="album py-5">
         <div class="container-sell">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5">
-                <div class="col">
-                    <input type="checkbox">
-                    <div class="card mx-auto">
-                        <img src="public/images/sell/pivo1.png" alt="pivo">
-                        <div class="card-body">
-                            <h4>BACK IN TOWN</h4><br>
-                            <h5>IPA</h5>
-                            <h6>14°</h6>
-                            <h6>Cena: 5 EUR</h6>
-                            <p class="card-text">Popis piva</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="<?= $link->url("home.beer") ?>">docasny</a>
+                <?php foreach ($data["beers"] as $beer): ?>
+                        <div class="col">
+                            <a href="<?= $link->url("home.beer", ["id" => $beer->getId()]) ?>">
+                            <input type="checkbox">
+                            <div class="card mx-auto">
+                                    <img src="<?= $beer->getObrazok() ?>" alt="pivo">
+                                <div class="card-body">
+                                    <h4><?= $beer->getNazov() ?></h4><br>
+                                    <h5><?= $beer->getStyl() ?></h5>
+                                    <h6><?= $beer->getStupen() ?></h6>
+                                    <h6>Cena: <?= $beer->getCena() ?> EUR</h6>
+                                    <p class="card-text"><?= $beer->getPopis() ?></p>
+                                </div>
                             </div>
+                            </a>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <input type="checkbox">
-                    <div class="card mx-auto">
-                        <img src="public/images/sell/pivo2.png" alt="pivo">
-                        <div class="card-body">
-                            <h4>ŽELEZNÁ LADY</h4><br>
-                            <h5>IPA</h5>
-                            <h6>15°</h6>
-                            <h6>Cena: 5 EUR</h6>
-                            <p class="card-text">Popis piva</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <input type="checkbox">
-                    <div class="card mx-auto">
-                        <img src="public/images/sell/pivo3.png" alt="pivo">
-                        <div class="card-body">
-                            <h4>TANCUJÚCA KOMÉTA</h4><br>
-                            <h5>IPA</h5>
-                            <h6>11°</h6>
-                            <h6>Cena: 5 EUR</h6>
-                            <p class="card-text">Popis piva</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <input type="checkbox">
-                    <div class="card mx-auto">
-                        <img src="public/images/sell/pivo4.png" alt="pivo">
-                        <div class="card-body">
-                            <h4>LIETAJÚCA KOALA</h4><br>
-                            <h5>IPA</h5>
-                            <h6>14°</h6>
-                            <h6>Cena: 5 EUR</h6>
-                            <p class="card-text">Popis piva</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <input type="checkbox">
-                    <div class="card mx-auto">
-                        <img src="public/images/sell/pivo5.png" alt="pivo">
-                        <div class="card-body">
-                            <h4>ZÁLETNÁ SUSEDA</h4><br>
-                            <h5>IPA</h5>
-                            <h6>13°</h6>
-                            <h6>Cena: 5 EUR</h6>
-                            <p class="card-text">Popis piva</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <input type="checkbox">
-                    <div class="card mx-auto">
-                        <img src="public/images/sell/pivo6.png" alt="pivo">
-                        <div class="card-body">
-                            <h4>WHEATAMIN</h4><br>
-                            <h5>WHEAT</h5>
-                            <h6>11°</h6>
-                            <h6>Cena: 5 EUR</h6>
-                            <p class="card-text">Popis piva</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-sm btn-outline-secondary btn-custom">Pridať do košíka</button>
-                            </div>
-                        </div>
-                    </div>
+                <?php endforeach; ?>
+                <div class="d-flex justify-content-between align-items-center">
+                    <?php if ($auth->isLogged() && $auth->getLoggedUserName() == "Admin"): ?>
+                        <a href="<?= $link->url("beer.form") ?>" class="btn btn-custom" type="submit">Pridať</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
