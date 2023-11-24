@@ -53,30 +53,18 @@ class BeerController extends AControllerBase
         $id = $this->request()->getValue("id");
         if ($id > 0) {
             $beer = Beer::getOne($id);
-            $beer->setNazov($this->request()->getValue("nazov"));
-            $beer->setStyl($this->request()->getValue("styl"));
-            $beer->setDruh($this->request()->getValue("druh"));
-            $beer->setCena($this->request()->getValue("cena"));
-            $beer->setStupen($this->request()->getValue("stupen"));
-            $beer->setPivovar($this->request()->getValue("pivovar"));
-            $beer->setPopis($this->request()->getValue("popis"));
-            $beer->setObrazok($this->request()->getValue("obrazok"));
-            $beer->save();
-            return new RedirectResponse($this->url("home.sell"));
-
         } else {
-            $newBeer = new Beer();
-            $newBeer->setNazov($this->request()->getValue("nazov"));
-            $newBeer->setStyl($this->request()->getValue("styl"));
-            $newBeer->setDruh($this->request()->getValue("druh"));
-            $newBeer->setCena($this->request()->getValue("cena"));
-            $newBeer->setStupen($this->request()->getValue("stupen"));
-            $newBeer->setPivovar($this->request()->getValue("pivovar"));
-            $newBeer->setPopis($this->request()->getValue("popis"));
-            $newBeer->setObrazok($this->request()->getValue("obrazok"));
-
-            $newBeer->save();
-            return new RedirectResponse($this->url("home.sell"));
+            $beer = new Beer();
         }
+        $beer->setNazov($this->request()->getValue("nazov"));
+        $beer->setStyl($this->request()->getValue("styl"));
+        $beer->setDruh($this->request()->getValue("druh"));
+        $beer->setCena($this->request()->getValue("cena"));
+        $beer->setStupen($this->request()->getValue("stupen"));
+        $beer->setPivovar($this->request()->getValue("pivovar"));
+        $beer->setPopis($this->request()->getValue("popis"));
+        $beer->setObrazok($this->request()->getValue("obrazok"));
+        $beer->save();
+        return new RedirectResponse($this->url("home.sell"));
     }
 }
