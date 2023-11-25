@@ -127,25 +127,7 @@ main img {
     height: 15rem;
 }
 
-.container-sell input[type="checkbox"] {
-    display: none;
-}
-
-.container-sell label {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-}
-
-.container-sell .card-body p.card-text {
-    display: none;
-}
-
-.container-sell input[type="checkbox"]:checked + label .card-body p.card-text {
-    display: block;
-}
-
-.container-sell .card {
+.container .card {
     max-width: 20rem;
 }
 
@@ -155,7 +137,7 @@ main img {
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s;
 }
-
+/*
 section {
     background-color: #3E2500;
     color: white;
@@ -166,6 +148,8 @@ section {
     flex-wrap: wrap;
     gap: 2rem;
 }
+
+ */
 
 /*
 login.html
