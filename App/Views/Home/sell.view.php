@@ -79,7 +79,7 @@
                         <div class="col">
                             <a href="<?= $link->url("home.beer", ["id" => $beer->getId()]) ?>">
                             <input type="checkbox">
-                            <div class="card mx-auto">
+                            <div class="card mx-auto border-0">
                                     <img src="<?= $beer->getObrazok() ?>" alt="pivo">
                                 <div class="card-body">
                                     <h4><?= $beer->getNazov() ?></h4><br>

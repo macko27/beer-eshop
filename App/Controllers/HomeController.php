@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
 use App\Models\Beer;
+use App\Models\Review;
 
 /**
  * Class HomeController
@@ -49,8 +50,10 @@ class HomeController extends AControllerBase
     {
         $id = $this->request()->getValue("id");
         $beer = Beer::getOne($id);
+        $reviews = Review::getAll("beerId = ?", [$id]);
         return $this->html([
-            "beer" => $beer
+            "beer" => $beer,
+            "reviews" => $reviews
         ]);
     }
 }

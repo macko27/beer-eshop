@@ -6,6 +6,7 @@ use App\Core\AControllerBase;
 use App\Core\HTTPException;
 use App\Core\Responses\RedirectResponse;
 use App\Core\Responses\Response;
+use App\Helpers\FileName;
 use App\Models\Beer;
 
 class BeerController extends AControllerBase
@@ -63,7 +64,11 @@ class BeerController extends AControllerBase
         $beer->setStupen($this->request()->getValue("stupen"));
         $beer->setPivovar($this->request()->getValue("pivovar"));
         $beer->setPopis($this->request()->getValue("popis"));
-        $beer->setObrazok($this->request()->getValue("obrazok"));
+        $fileName = $this->request()->getValue("obrazok");
+        if ($id < 1) {
+            $fullFileName = FileName::generate($fileName, "sell");
+            $beer->setObrazok($fullFileName);
+        }
         $beer->save();
         return new RedirectResponse($this->url("home.sell"));
     }

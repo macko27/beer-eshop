@@ -31,10 +31,12 @@
             <label for="pivovar" class="form-label">Pivovar</label>
             <input type="text" class="form-control" id="pivovar" name="pivovar" value="<?= @$data['beer']?->getPivovar() ?>" required>
         </div>
+        <?php if (@$data['beer']?->getObrazok() == ""): ?>
         <div class="mb-3">
-            <label for="obrazok" class="form-label">Názov obrázka</label>
-            <input type="text" class="form-control" id="obrazok" name="obrazok" value="<?= @$data['beer']?->getObrazok() ?>" required>
+            <label for="obrazok" class="form-label">Vyber obrázok</label>
+            <input class="form-control" type="file" id="obrazok" name="obrazok">
         </div>
+        <?php endif; ?>
         <div class="mb-3">
             <label for="popis" class="form-label"></label>
             <textarea class="form-control" id="popis" name="popis" rows="3"><?= @$data['beer']?->getPopis() ?></textarea>

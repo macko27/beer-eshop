@@ -8,7 +8,7 @@
 <div class="container-beer container px-4 py-5 px-lg-5 my-5">
     <div class="row gx-4 gx-lg-5 align-items-center">
         <div class="col-md-6">
-            <img class="mx-auto d-block" src="../../../public/images/sell/pivo1.png" alt="beer">
+            <img class="mx-auto d-block" src="<?= $data["beer"]->getObrazok() ?>" alt="beer">
         </div>
         <div class="col-md-6">
             <h1 class="fw-bolder mt-4"><?= $data["beer"]->getNazov() ?></h1>
@@ -26,6 +26,16 @@
                     <?php endif; ?>
                 </div>
             </div>
+        </div>
+
+        <div class="reviews">
+            <?php foreach ($data["reviews"] as $review): ?>
+                <h5><?= $review->getUserLogin() ?></h5>
+                <p><?= $review->getText() ?></p>
+                <span><?= $review->getNumberOfStars() ?>/5</span>
+                <a href="<?= $link->url("review.form", ["id" => $review->getId()]) ?>" class="btn btn-custom" type="submit">Upraviť</a>
+                <a href="<?= $link->url("review.delete", ["id" => $review->getId()]) ?>" class="btn btn-custom" type="submit">Zmazať</a>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
