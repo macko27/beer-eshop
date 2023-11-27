@@ -42,7 +42,7 @@
             <textarea class="form-control" id="popis" name="popis" rows="3"><?= @$data['beer']?->getPopis() ?></textarea>
         </div>
 
-        <button class="btn btn-primary" type="submit">Potvrdiť</button>
+        <button class="btn btn-custom" type="submit">Potvrdiť</button>
 
     </form>
 </div>

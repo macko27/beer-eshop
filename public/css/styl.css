@@ -10,6 +10,16 @@ styl vseobecne pre vsetky
     --text-main-hoover: #DD9933;
 }
 
+.navbar.transparent {
+    background-color: rgba(62, 37, 0, 0.85);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.navbar {
+    background-color: rgba(62, 37, 0, 1);
+    transition: background-color 0.5s ease-in-out;
+}
+
 .navbar, footer {
     background-color: var(--background-second-color);
     color: var(--text-second-color);
@@ -115,14 +125,6 @@ main .index {
 /*
 sell.html
  */
-@media (min-width: 700px) {
-    .search-bar {
-        margin: auto;
-        min-width: 15rem;
-        max-width: 40rem;
-    }
-}
-
 main img {
     height: 15rem;
 }
@@ -137,19 +139,14 @@ main img {
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s;
 }
-/*
-section {
-    background-color: #3E2500;
-    color: white;
-    margin: 3rem;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+
+.card a .stretched-link {
+    text-decoration: none;
 }
 
- */
+.search {
+
+}
 
 /*
 login.html
@@ -251,3 +248,6 @@ beer.html
 .form-control {
     border-color: black;
 }
+
+
+
